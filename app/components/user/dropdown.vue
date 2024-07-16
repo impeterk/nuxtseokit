@@ -2,6 +2,12 @@
 const items = [
   [
     {
+      label: "user@email.com",
+      class: "pointer-events-none text-primary justify-center",
+    },
+  ],
+  [
+    {
       label: "Profile",
       icon: "i-heroicons-user",
     },
@@ -22,7 +28,7 @@ const items = [
   <div>
     <UDropdown :items="items">
       <UButton color="white" size="lg" variant="link">
-        <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" />
+        <UAvatar src="" icon="i-heroicons-user" />
         User@email.com
       </UButton>
     </UDropdown>

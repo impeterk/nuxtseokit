@@ -10,7 +10,6 @@ useHead({
     <main>
       <slot />
     </main>
-    <Footer />
   </div>
 </template>
 
@@ -19,6 +18,6 @@ useHead({
   @apply font-sans;
   height: 100%;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr;
 }
 </style>

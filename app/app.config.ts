@@ -4,7 +4,7 @@ export default defineAppConfig({
       dynamic: true
     },
     primary: 'violet',
-    gray: 'cool'
+    gray: 'slate'
   }
 })
 
