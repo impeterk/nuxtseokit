@@ -1,10 +1,6 @@
 <script setup lang="ts">
-const title = "Dashboard";
-useSeoMeta({
-  title,
-});
-const route = useRoute();
-route.meta.title = title;
+// const title = "Dashboard";
+useTitle("Dashboard");
 </script>
 
 <template>

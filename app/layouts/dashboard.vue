@@ -1,43 +1,14 @@
-<script setup lang="ts">
-const links = [
-  [
-    {
-      label: "Dashboard",
-      icon: "i-material-symbols-space-dashboard-sharp",
-      to: "/dashboard",
-    },
-    {
-      label: "Installation",
-      icon: "i-heroicons-home",
-    },
-    {
-      label: "Vertical Navigation",
-      icon: "i-heroicons-chart-bar",
-    },
-    {
-      label: "Command Palette",
-      icon: "i-heroicons-command-line",
-    },
-  ],
-];
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <UContainer :ui="{ constrained: '' }" class="dashboard h-full">
+  <UContainer
+    :ui="{ constrained: '', padding: 'px-4 sm:px-0 lg:px-0' }"
+    class="dashboard h-full"
+  >
     <aside class="bg-gray-100 py-8 hidden lg:flex flex-col">
-      <UVerticalNavigation :links="links" />
-      <UVerticalNavigation
-        class="mt-auto text-center"
-        :links="[
-          {
-            label: 'Sign Out',
-            icon: 'i-heroicons-arrow-left-start-on-rectangle',
-            iconClass: 'rotate-180',
-          },
-        ]"
-      />
+      <SideNav class="shrink-0" />
     </aside>
-    <section class="py-8 h-full border">
+    <section class="py-8 h-full border space-y-20">
       <PageTitle />
       <slot />
     </section>

@@ -12,12 +12,12 @@ const columns = [
     key: "email",
     label: "Email",
   },
-  {
-    key: "role",
-    label: "Role",
-  },
+
   {
     key: "actions",
+  },
+  {
+    key: "role",
   },
 ];
 
@@ -97,10 +97,18 @@ const items = (row) => [
 ];
 
 const selected = ref([people[1]]);
+const currentOrg = useCurrentOrg();
 </script>
 
 <template>
   <UContainer>
+    <div class="flex p-4 items-center justify-between bg-gray-100 rounded-t-lg">
+      <h3 class="text-xl font-medium">{{ currentOrg }} Domains</h3>
+      <UInput
+        icon="i-heroicons-magnifying-glass-20-solid"
+        placeholder="Filter domains..."
+      />
+    </div>
     <UTable v-model="selected" :rows="people" :columns="columns">
       <template #name-data="{ row }">
         <span

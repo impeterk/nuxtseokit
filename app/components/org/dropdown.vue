@@ -1,18 +1,20 @@
 <script setup lang="ts">
-const state = reactive({ currentOrg: "Org1" });
+const currentOrg = useCurrentOrg();
+
+currentOrg.value = "Org1";
 
 const items = [
   [
     {
       label: "Org1",
       click: () => {
-        state.currentOrg = "Org1";
+        currentOrg.value = "Org1";
       },
     },
     {
       label: "Another Org",
       click: () => {
-        state.currentOrg = "Another Org";
+        currentOrg.value = "Another Org";
       },
     },
   ],
@@ -22,9 +24,7 @@ const items = [
 <template>
   <div>
     <UDropdown :items>
-      <UButton color="white" variant="link" lize="lg">{{
-        state.currentOrg
-        }}</UButton>
+      <UButton color="white" variant="link" lize="lg">{{ currentOrg }}</UButton>
     </UDropdown>
   </div>
 </template>
