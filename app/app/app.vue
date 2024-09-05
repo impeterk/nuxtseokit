@@ -1,9 +1,10 @@
 <template>
   <NuxtRouteAnnouncer />
-  <NuxtLoadingIndicator />
+  <NuxtLoadingIndicator color="#6366f1" />
   <NuxtLayout name="default">
     <NuxtPage />
   </NuxtLayout>
+  <MobileSidebar />
 </template>
 
 <style>

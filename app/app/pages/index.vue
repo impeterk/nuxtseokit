@@ -6,17 +6,22 @@ useHead({
 
 <template>
   <section
-    class="grid grid-cols-2 h-full bg-gradient-to-br from-gray-50 to-gray-200"
+    class="grid grid-cols-1 lg:grid-cols-2 h-full bg-gradient-to-br from-gray-50 to-gray-200 relative"
   >
     <NuxtImg
       src="/hero.webp"
       placeholder
-      class="h-full w-full object-cover object-center"
+      class="h-full w-full object-cover object-center max-lg:absolute top-0 left-0"
     />
-    <section class="place-self-center flex flex-col gap-12 w-full max-w-md">
-      <div class="prose dark:prose-invert text-pretty">
+    <span class="absolute left-1 bottom-1 text-xs text-gray-400"
+      >Image has been AI generated, because we are developers...</span
+    >
+    <section
+      class="place-self-center flex flex-col gap-12 w-full max-w-md z-10"
+    >
+      <div class="prose dark:prose-invert text-pretty text-center">
         <h1>SEO kit</h1>
-        <h2>Your last tool to peak SEO</h2>
+        <h2>Your last tool for peak SEO Performence</h2>
       </div>
       <UCard class="shadow-lg">
         <template #header>

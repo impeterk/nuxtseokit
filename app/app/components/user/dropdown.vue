@@ -2,7 +2,7 @@
 const items = [
   [
     {
-      label: "user@email.com",
+      label: user.email,
       class: "pointer-events-none text-primary justify-center",
     },
   ],
@@ -10,6 +10,7 @@ const items = [
     {
       label: "Profile",
       icon: "i-heroicons-user",
+      to: "/dashboard/profile",
     },
   ],
   [
@@ -29,7 +30,7 @@ const items = [
     <UDropdown :items="items">
       <UButton color="white" size="lg" variant="link">
         <UAvatar src="" icon="i-heroicons-user" />
-        User@email.com
+        {{ user.email }}
       </UButton>
     </UDropdown>
   </div>

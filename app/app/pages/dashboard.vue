@@ -1,7 +1,4 @@
-<script setup lang="ts">
-// const title = "Dashboard";
-useTitle("Dashboard");
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <NuxtLayout name="dashboard">

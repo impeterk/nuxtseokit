@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    Page: dashboard/[domain]/[scan]/index
+    Page: dashboard/settings
   </div>
 </template>
 
