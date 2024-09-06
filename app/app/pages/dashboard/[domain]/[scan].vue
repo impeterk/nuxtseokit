@@ -25,15 +25,19 @@ function handleOpenCard(card: string) {
 const items = [
   {
     label: "Body",
+    icon: "i-material-symbols-lab-profile-outline",
   },
   {
     label: "Meta",
+    icon: "i-solar-global-linear",
   },
   {
     label: "Social",
+    icon: "i-fluent-people-community-48-regular",
   },
   {
     label: "Schema",
+    icon: "i-mdi-code-json",
   },
 ];
 
@@ -84,6 +88,7 @@ const passwordForm = reactive({ currentPassword: "", newPassword: "" });
                 width: 'w-1/2',
                 base: 'bg-gray-50',
                 rounded: 'rounded-b-none',
+                padding: 'px-4',
                 marker: { background: 'bg-primary-200' },
               },
               container: 'bg-gray-50 p-4 rounded-lg rounded-tl-none',
@@ -92,12 +97,243 @@ const passwordForm = reactive({ currentPassword: "", newPassword: "" });
           >
             <template #item="{ item }">
               <div v-if="item.label === 'Body'" class="space-y-3">
-                <UFormGroup label="Name" name="name">
-                  <UInput v-model="accountForm.name" />
-                </UFormGroup>
-                <UFormGroup label="Username" name="username">
-                  <UInput v-model="accountForm.username" />
-                </UFormGroup>
+                <div class="body-grid">
+                  <UCard
+                    :ui="{
+                      header: {
+                        padding: 'py-3',
+                      },
+                      divide: 'divide-y-0',
+                      body: {
+                        padding: 'py-0 sm:pt-0',
+                      },
+                    }"
+                  >
+                    <template #header>
+                      <h4 class="text-xl font-semibold border-b">Headings</h4>
+                    </template>
+                    <ul class="space-y-3">
+                      <li>h1</li>
+                      <li>h2</li>
+                      <li>h3</li>
+                      <li>h4</li>
+                      <li>h5</li>
+                      <li>h6</li>
+                    </ul>
+                  </UCard>
+
+                  <UCard
+                    :ui="{
+                      header: {
+                        padding: 'py-3',
+                      },
+                      background: 'bg-red-100',
+                      divide: 'divide-y-0',
+                      body: {
+                        padding: 'py-0 sm:pt-0',
+                      },
+                    }"
+                  >
+                    <template #header>
+                      <h4
+                        class="text-xl font-semibold border-b border-b-gray-300"
+                      >
+                        Evaluation
+                      </h4>
+                    </template>
+                    <ul class="space-y-3">
+                      <li>O.K.</li>
+                      <li>missing</li>
+                      <li>too short</li>
+                      <li>duplicate</li>
+                    </ul>
+                  </UCard>
+
+                  <UCard
+                    :ui="{
+                      header: {
+                        padding: 'py-3',
+                      },
+                      divide: 'divide-y-0',
+                      background: 'bg-sky-100',
+                      body: {
+                        padding: 'py-0 sm:pt-0',
+                      },
+                    }"
+                  >
+                    <template #header>
+                      <h4
+                        class="text-xl font-semibold border-b border-b-gray-300"
+                      >
+                        AI Magic
+                      </h4>
+                    </template>
+                    <ul class="space-y-3">
+                      <li>O.K.</li>
+                      <li>Ad this cool heading</li>
+                      <li>Let's make it a bit longer</li>
+                      <li>This is not duplicate</li>
+                    </ul>
+                  </UCard>
+                </div>
+                <UDivider size="xs" class="py-3" />
+                <div class="body-grid">
+                  <UCard
+                    :ui="{
+                      header: {
+                        padding: 'py-3',
+                      },
+                      divide: 'divide-y-0',
+                      body: {
+                        padding: 'py-0 sm:pt-0',
+                      },
+                    }"
+                  >
+                    <template #header>
+                      <h4 class="text-xl font-semibold border-b">Images</h4>
+                    </template>
+                    <ul class="space-y-3">
+                      <li>
+                        <UPopover
+                          mode="hover"
+                          :popper="{ placement: 'top-start' }"
+                        >
+                          <UButton
+                            color="white"
+                            icon="i-heroicons-photo"
+                            square
+                            padded
+                            variant="ghost"
+                          />
+                          <template #panel>
+                            <NuxtImg
+                              src="https://picsum.photos/300/200.webp?random=1"
+                              alt="some placeholder"
+                              class="h-24 w-52"
+                            />
+                          </template>
+                        </UPopover>
+                      </li>
+                      <li>
+                        <UPopover
+                          mode="hover"
+                          :popper="{ placement: 'top-start' }"
+                        >
+                          <UButton
+                            color="white"
+                            icon="i-heroicons-photo"
+                            square
+                            padded
+                            variant="ghost"
+                          />
+                          <template #panel>
+                            <NuxtImg
+                              src="https://picsum.photos/300/200.webp?random=2"
+                              alt="some placeholder"
+                              class="h-24 w-52"
+                            />
+                          </template>
+                        </UPopover>
+                      </li>
+                      <li>
+                        <UPopover
+                          mode="hover"
+                          :popper="{ placement: 'top-start' }"
+                        >
+                          <UButton
+                            color="white"
+                            icon="i-heroicons-photo"
+                            square
+                            padded
+                            variant="ghost"
+                          />
+                          <template #panel>
+                            <NuxtImg
+                              src="https://picsum.photos/300/200.webp?random=3"
+                              alt="some placeholder"
+                              class="h-24 w-52"
+                            />
+                          </template>
+                        </UPopover>
+                      </li>
+                      <li>
+                        <UPopover
+                          mode="hover"
+                          :popper="{ placement: 'top-start' }"
+                        >
+                          <UButton
+                            color="white"
+                            icon="i-heroicons-photo"
+                            square
+                            padded
+                            variant="ghost"
+                          />
+                          <template #panel>
+                            <NuxtImg
+                              src="https://picsum.photos/300/200.webp?random=4"
+                              alt="some placeholder"
+                              class="h-24 w-52"
+                            />
+                          </template>
+                        </UPopover>
+                      </li>
+                    </ul>
+                  </UCard>
+
+                  <UCard
+                    :ui="{
+                      header: {
+                        padding: 'py-3',
+                      },
+                      background: 'bg-red-100',
+                      divide: 'divide-y-0',
+                      body: {
+                        padding: 'py-0 sm:pt-0',
+                      },
+                    }"
+                  >
+                    <template #header>
+                      <h4
+                        class="text-xl font-semibold border-b border-b-gray-300"
+                      >
+                        Evaluation
+                      </h4>
+                    </template>
+                    <ul class="space-y-3">
+                      <li>O.K.</li>
+                      <li>missing</li>
+                      <li>too short</li>
+                      <li>duplicate</li>
+                    </ul>
+                  </UCard>
+
+                  <UCard
+                    :ui="{
+                      header: {
+                        padding: 'py-3',
+                      },
+                      divide: 'divide-y-0',
+                      background: 'bg-sky-100',
+                      body: {
+                        padding: 'py-0 sm:pt-0',
+                      },
+                    }"
+                  >
+                    <template #header>
+                      <h4
+                        class="text-xl font-semibold border-b border-b-gray-300"
+                      >
+                        AI Magic
+                      </h4>
+                    </template>
+                    <ul class="space-y-3">
+                      <li>O.K.</li>
+                      <li>Ad this cool heading</li>
+                      <li>Let's make it a bit longer</li>
+                      <li>This is not duplicate</li>
+                    </ul>
+                  </UCard>
+                </div>
               </div>
               <div v-else-if="item.label === 'Meta'" class="space-y-3">
                 <UFormGroup label="Current Password" name="current" required>
@@ -155,4 +391,10 @@ const passwordForm = reactive({ currentPassword: "", newPassword: "" });
   </UCard>
 </template>
 
-<style scoped></style>
+<style scoped>
+.body-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 1.5rem;
+}
+</style>

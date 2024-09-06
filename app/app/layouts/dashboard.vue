@@ -11,7 +11,7 @@
       <SideNav />
     </aside>
     <section>
-      <main class="py-8 h-full space-y-20 px-8">
+      <main class="py-8 h-full space-y-12 px-8">
         <PageTitle />
         <slot />
       </main>

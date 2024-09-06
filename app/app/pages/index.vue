@@ -12,6 +12,8 @@ useHead({
       src="/hero.webp"
       placeholder
       class="h-full w-full object-cover object-center max-lg:absolute top-0 left-0"
+      format="webp"
+      quality="80"
     />
     <span class="absolute left-1 bottom-1 text-xs text-gray-400"
       >Image has been AI generated, because we are developers...</span

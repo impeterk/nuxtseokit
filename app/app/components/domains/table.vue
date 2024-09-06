@@ -15,9 +15,11 @@ const columns = [
 
   {
     key: "actions",
+    rowClass: "text-center",
   },
   {
     key: "continue",
+    rowClass: "text-center",
   },
 ];
 

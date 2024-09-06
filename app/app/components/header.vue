@@ -4,7 +4,7 @@ const sidebarOpen = useState("sidebarOpen", () => false);
 
 <template>
   <header
-    class="border-b border-gray-200 dark:border-gray-800 w-full pt-2 sticky top-0 bg-white"
+    class="border-b border-gray-200 dark:border-gray-800 w-full pt-2 sticky top-0 bg-white z-[100]"
   >
     <UContainer
       class="flex items-center justify-between content-center"

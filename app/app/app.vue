@@ -13,4 +13,7 @@ body,
 #__nuxt {
   height: 100%;
 }
+html {
+  scrollbar-gutter: auto !important;
+}
 </style>

@@ -37,13 +37,16 @@ const donutData = [
     <template #header>
       <h3 class="text-lg font-medium">domain-name.com</h3>
     </template>
-    <div class="space-y-12">
-      <section class="grid grid-cols-3 gap-4">
+    <div class="space-y-16">
+      <section class="grid grid-cols-3 gap-4 pt-8">
         <UCard
           :ui="{
+            ring: 'ring-2 ring-gray-500/50 dark:ring-gray-400/50',
+            shadow: 'shadow-lg',
             header: {
               padding: 'py-3',
             },
+            background: 'bg-gray-50',
           }"
         >
           <template #header>
@@ -73,6 +76,7 @@ const donutData = [
             header: {
               padding: 'py-3',
             },
+            background: 'bg-red-50',
           }"
         >
           <template #header>
@@ -97,6 +101,7 @@ const donutData = [
             header: {
               padding: 'py-3',
             },
+            background: 'bg-sky-50',
           }"
         >
           <template #header>

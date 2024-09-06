@@ -65,32 +65,70 @@ const people = [
     role: "Member",
   },
 ];
+
+const newScanModal = useState("newScanModal", () => false);
 </script>
 
 <template>
-  <UCard
-    :ui="{
-      header: {
-        background: 'bg-gray-400 ',
-        base: 'overflow-hidden text-white rounded-t-lg',
-      },
-    }"
-  >
-    <template #header>
-      <h3 class="text-lg font-medium">Scan Overview</h3>
-    </template>
-    <UTable :columns="columns" :rows="people">
-      <template #role-data="{ row }">
-        <UButton
-          :to="`/dashboard/${$route.params.domain}/${String(row.id)}`"
-          icon="i-heroicons-chevron-right-solid"
-          variant="ghost"
-          square
-          padded
-        />
+  <div>
+    <div class="flex justify-end">
+      <UButton
+        label="New Scan"
+        :ui="{ rounded: 'rounded-b-none' }"
+        icon="i-fluent-radar-20-regular"
+        size="lg"
+        color="gray"
+        variant="solid"
+        @click="newScanModal = true"
+      />
+
+      <UModal v-model="newScanModal">
+        <UCard>
+          <UForm class="space-y-4" @submit.prevent="">
+            <UFormGroup label="Email" name="email">
+              <UInput />
+            </UFormGroup>
+
+            <UFormGroup label="Password" name="password">
+              <UInput type="password" />
+            </UFormGroup>
+
+            <UButton type="submit"> Submit </UButton>
+          </UForm>
+        </UCard>
+      </UModal>
+    </div>
+    <UCard
+      :ui="{
+        divide: 'divide-y-0',
+        header: {
+          background: 'bg-gray-400 ',
+          base: 'overflow-hidden text-white rounded-tl-lg',
+        },
+        footer: {
+          base: 'flex justify-center',
+        },
+      }"
+    >
+      <template #header>
+        <h3 class="text-lg font-medium">Scan Overview</h3>
       </template>
-    </UTable>
-  </UCard>
+      <UTable :columns="columns" :rows="people">
+        <template #role-data="{ row }">
+          <UButton
+            :to="`/dashboard/${$route.params.domain}/${String(row.id)}`"
+            icon="i-heroicons-chevron-right-solid"
+            variant="ghost"
+            square
+            padded
+          />
+        </template>
+      </UTable>
+      <template #footer>
+        <UPagination :max="5" :page-count="5" :total="25" :model-value="1" />
+      </template>
+    </UCard>
+  </div>
 </template>
 
 <style scoped></style>

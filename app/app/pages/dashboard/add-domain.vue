@@ -1,5 +1,7 @@
 <script setup lang="ts">
-useTitle("Add Domain");
+useTitle("Add Domain", {
+  class: "text-center",
+});
 const form = reactive({
   domain: "",
   org: useCurrentOrg(),
