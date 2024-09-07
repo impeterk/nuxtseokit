@@ -11,13 +11,13 @@ useHead({
     <NuxtImg
       src="/hero.webp"
       placeholder
-      class="h-full w-full object-cover object-center max-lg:absolute top-0 left-0"
-      format="webp"
+      class="h-full w-full object-cover object-[65%] max-lg:absolute top-0 left-0"
+      format="awif"
       quality="80"
     />
-    <span class="absolute left-1 bottom-1 text-xs text-gray-400"
+    <!-- <span class="absolute left-1 bottom-1 text-xs text-gray-400"
       >Image has been AI generated, because we are developers...</span
-    >
+    > -->
     <section
       class="place-self-center flex flex-col gap-12 w-full max-w-md z-10"
     >
@@ -49,8 +49,10 @@ useHead({
           <UButton block size="xl">Log in</UButton>
           <UDivider label="or" />
           <UButton block size="xl" variant="outline">Get Started</UButton>
-          <NuxtLink to="/dashboard">Continue to dashboard</NuxtLink>
         </form>
+        <template #footer>
+          <NuxtLink to="/dashboard">Continue to dashboard</NuxtLink>
+        </template>
       </UCard>
     </section>
   </section>
